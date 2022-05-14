@@ -30,9 +30,13 @@ function Listing() {
             });
     }, [pageNumber]);
 
+    const handlePageChange = (nemPageNumber : number) => {
+        setPageNumber(nemPageNumber);
+    }
+
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handlePageChange}/>
 
             <div className="container">
                 <div className="row">
